@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="buydata.css">
+</head>
+<body>
+    <input type="number" placeholder="Enter your number" id="ent">
+    <br><br>
+    <select name="" id="net">
+         <option value="">SELECT NETWORK</option>
+         <option value="">MTN</option>
+         <option value="">GLO</option>
+         <option value="">AIRTEL</option>
+         <option value="">ETISALAT</option>elect>
+   </select>
+        <br><br>
+  <select name="" id="">
+    <option value="">SELECT PLAN </option>
+    <option value="">#100 for 100MB(daily plan)</option>
+    <option value="">#200 for 200MB(3 days plan)</option>
+    <option value="">#300 for 1GB(daily plan)</option>
+    <option value="">#500 for 2.5GB(2days plan)</option>
+    <option value="">#500 gor 1GB(7days plan)</option>
+    <option value="">#1000 for 1.5GB(30days plan)</option>
+    <option value="">#1500 for 6GB(7days plan)</option>
+    <option value=""></option>
+  </select>
+  <br><br>
+  <button onclick="buydata()" id="buy">BUY DATA</button>
+
+</body>
+
+
+
+<script>
+  const buydata=()=>{
+    if(net.value=="" && ent.value==""){
+      alert('Enter details!!!')
+    }else{
+      alert('Transaction succesful')
+      window.location.href='dashboard.html'
+    }
+  }
+</script>
+</html>

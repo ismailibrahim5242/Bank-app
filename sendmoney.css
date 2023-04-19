@@ -1,0 +1,37 @@
+body{
+ background-color: aqua;
+ background-image:linear-gradient(rgb(181, 247, 247),hsla(30, 0%, 100%, 0.978))
+
+}
+#acct{
+    margin-left: 10pc;
+    min-height: 4vh;
+    border-radius: 1pc;
+    padding-left: 5pc;
+    font-size: large;
+    border-color: rgb(41, 146, 233);
+    margin-top: 10pc;
+}
+
+#bank{
+    min-height: 4vh;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    border: solid rgb(150, 196, 233);
+    border-radius: 1pc;
+}
+
+#amt{
+    min-height: 4vh;
+    margin-left: 10pc;
+    border-color: rgb(46, 151, 221);
+    border-radius: 1pc;
+}
+
+#ok{
+    margin-left: 30pc;
+    min-height: 8vh;
+    min-width: 10pc;
+    border-radius: 1pc;
+    background-color: rgb(114, 173, 114);
+}

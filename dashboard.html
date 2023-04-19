@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+ <h1 align="center">WELCOME TO DASHBOARD</h1>
+      <div id="dash">
+        <span class="title" style="color: white;">Account Name:</span> <span id="accname" style="color: white;"></span>
+        <br><br>
+        <span class="title" style="color: white;">Account Number:</span> <span id="acctno" style="color: white;"></span>
+        <br><br>
+        <span class="title" style="color: white;">Account Balance:</span> <span id="Balance" style="color: white;"></span>
+      </div>
+        <br><br><br>
+        <div class="grid-container">
+            <div class="box" id="one" onclick="Airtime()">BUY AIRTIME</div>
+            <div class="box" id="two" onclick="sendmoney()">SEND MONEY</div>
+            <div class="box" id="two" onclick="deposit()">DEPOSIT</div>
+            <div class="box" id="three" onclick="paybills()">PAY BILLS</div>
+            <div class="box" id="four" onclick="buydata()">BUY DATA</div>
+            <div class="box" id="five">TRANSACTION HISTORY</div>
+          </div>
+
+
+
+
+    <script>
+     var allusers=JSON.parse(localStorage.getItem('usersinfo'))
+      var currentIndex = JSON.parse(localStorage.getItem('localIndex'))
+      console.log(allusers);
+      console.log(currentIndex);
+      accname.innerHTML = `${allusers[currentIndex].firstname}`
+      acctno.innerHTML=`${allusers[currentIndex].Accountnumber}`
+      Balance.innerHTML=`${allusers[currentIndex].balance}`
+      const Airtime=()=>{
+        window.location.href='airtime.html'
+     }
+
+
+      const sendmoney=()=>{
+       window.location.href='sendmoney.html'
+      }
+
+       const paybills=()=>{
+         window.location.href='paybills.html'
+       }
+
+       const deposit=()=>{
+        window.location.href='deposit.html'
+       }
+
+       const buydata=()=>{
+        window.location.href='buydata.html'
+       }
+
+       const settings=()=>{
+        window.location.href='settings.html'
+       }
+      
+    </script>
+</body>
+</html>

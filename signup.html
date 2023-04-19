@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+    <div id="pin">
+
+   <section>
+    <div class="overlay"></div>
+   </section>
+
+
+        <input type="text" placeholder="firstname" id="fn">
+        <input type="text" placeholder="middlename" id="mn">
+        <input type="text" placeholder="lastname" id="ln">
+        <br><br><br>
+        <select name="" id="G">
+            <option value="">SELECT GENDER</option>
+            <option value="">Male</option>
+            <option value="">Female</option>
+        </select>   
+        <input type="number" placeholder="Age" id="age">
+        <input type="text" placeholder="Address" id="ad">
+        <br><br><br>
+        <input type="text" placeholder="Email" id="em">
+        <input type="number" placeholder="phonenumber" id="ph">
+        <input type="text" placeholder="country" id="co">
+        <br><br><br>
+        <input type="text" placeholder="Nextofkin name" id="nk">
+        <input type="text" placeholder="Nextofkin number" id="nextno">
+        <br><br>
+        <input type="password" placeholder="Password" id="pw">
+        <input type="password" placeholder="Confirm password" id="cpw">
+    </div>
+    <br><br><br>
+    <button onclick="submit()" id="btn">SUBMIT</button>
+    
+
+
+
+
+    <script>
+        var allusers=[]
+        if(localStorage.usersinfo){
+       var itemGotten=JSON.parse(localStorage.getItem('usersinfo'))
+       allusers=itemGotten;
+        }
+
+        const submit=()=>{
+            var users={
+                firstname:fn.value,
+                middlename:mn.value,
+                lastname:ln.value,
+                gender:G.value,
+                Age:age.value,
+                Address:ad.value,
+                Email:em.value,
+                phonenumber:ph.value,
+                country:co.value,
+                Nextofkin:nk.value,
+                NextofkinNumber:nextno.value,
+                password:pw.value,
+                confirmpassword:cpw.value,
+                balance: 0,
+                Accountnumber: `061${Math.floor(Math.random()* 10000000 )}`,
+                Transactionhistory: []
+            }
+            if(fn.value=="" && mn.value=="" && em.value=="" && pw.value==""){
+                 alert('please complete the form')
+            }else{
+                allusers.push(users)
+            localStorage.setItem('usersinfo', JSON.stringify(allusers))
+            console.log(allusers);
+            window.location.href='Login.html'
+            }
+        }
+    </script>
+</body>
+</html>

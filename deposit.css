@@ -1,0 +1,24 @@
+body{
+    background-color: rgb(172, 233, 233);
+}
+
+#depo{
+    margin-top: 10pc;
+    margin-left: 30pc;
+    min-height: 5vh;
+    font-size: larger;
+    font-weight: bolder;
+}
+
+
+#btn{
+    margin-left: 33pc;
+    margin-top: 3pc;
+    min-height: 7vh;
+    min-width: 12pc;
+    font-size: medium;
+    font-weight: bold;
+    background-color: green;
+    color: white;
+    border-radius: 1pc;
+}

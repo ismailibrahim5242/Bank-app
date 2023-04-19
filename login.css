@@ -1,0 +1,40 @@
+#em{
+    min-height: 5vh;
+    min-width: 20pc;
+    border-radius: 1pc;
+    margin-left: 30pc;
+    margin-top: 3pc;
+    font-size: large;
+    font-weight: bold;
+    background-color: rgb(6, 178, 229);
+    color: azure;
+}
+#pw{
+    min-height: 5vh;
+    min-width: 20pc;
+    border-radius: 1pc;
+    margin-left: 30pc;
+    font-size: large;
+    font-weight: bold;
+    background-color: rgb(6, 178, 229);
+    color: azure;
+}
+
+#log{
+    min-height: 3pc;
+    min-width: 20pc;
+    border-radius: 2pc;
+    font-size: larger;
+    font-weight: bolder;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    /* background-color: whitesmoke; */
+    color: rgb(7, 84, 226);
+    margin-left: 30pc;
+    margin-top: 3pc;
+}
+
+
+/* #logo{
+    /* margin-bottom: 100pc; */
+    height: 5%;
+} */

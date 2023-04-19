@@ -1,0 +1,16 @@
+body{
+    background-color: gainsboro;
+}
+
+#RE{
+    margin-left: 30pc;
+    margin-top: 8pc;
+}
+
+#btn{
+    margin-left: 32pc;
+    min-height: 5vh;
+    background-color: rgb(55, 148, 55);
+    color: whitesmoke;
+    border-radius: 1pc;
+}

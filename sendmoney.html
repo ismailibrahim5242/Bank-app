@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="sendmoney.css">
+</head>
+<body>
+    <select name="" id="bank">
+        <option value="">Select bank</option>
+        <option value="">UBA</option>
+        <option value="">ZENIT BANK</option>
+        <option value="">POLARIS BANK</option>
+        <option value="">UNION BANK</option>
+        <option value="">WEMA BANK</option>
+        <option value="">FIRST BANK</option>
+        <option value="">OPAY</option>
+        <option value="">KUDA MICROFINANCE BANK</option>
+        <option value="">GT BANK</option>
+        <option value="">LIVINGSPRING BANK</option>
+        <option value="">MERCHANT BANK</option>
+        <option value="">MONIE POINT</option>
+        <option value="">PALMPAY</option>
+        <option value="">KEYSTONE BANK</option>
+        <option value="">ACCESS BANK</option>
+        <option value="">DIAMOND BANK</option>
+        <option value="">ECO BANK</option>
+        <option value="">FIDELITY BANK</option>
+        <option value="">FCMB</option>
+    </select>
+     <input type="number" placeholder="Account number" id="acct">
+     <input type="number" placeholder="Amount" id="amt">
+     <br><br><br><br><br><br><br><br>
+        <button onclick="sendmoney()" id="ok">Send money</button>
+
+
+
+
+    <script>        
+        var allusers=JSON.parse(localStorage.getItem('usersinfo'))
+        var currentIndex = JSON.parse(localStorage.getItem('localIndex'))
+        console.log(allusers);
+        console.log(currentIndex);
+        const sendmoney=()=>{
+           let  newbalance=amt.value
+           let userbalance=allusers[currentIndex].balance
+           for (let index = 0; index < allusers.length; index++) {
+                let userdetails=allusers[index]
+                if(userdetails.Accountnumber==acct.value){
+                    allusers[index].balance=Number(amt.value) + Number(allusers[index].balance)
+                    console.log('sent');
+                    localStorage.setItem('mybank',JSON.stringify(allusers))
+                }
+                
+            }
+                
+            if(amt.value==""){
+                alert('Input Amount')
+            }else{
+                console.log(allusers);
+                console.log(currentIndex);
+                var newamount = Number( Number(allusers[currentIndex].balance) - Number(amt.value)) 
+                allusers[currentIndex].balance = newamount;
+                localStorage.setItem('usersinfo',JSON.stringify(allusers))
+                window.location.href='dashboard.html'
+                
+            }
+        }
+     </script>
+
+</body>
+</html>

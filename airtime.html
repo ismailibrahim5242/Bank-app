@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="airtime.css">
+</head>
+<body>
+    <div id="RE">
+        <input type="number" name="" id="num" placeholder="Phonenumber">
+        <br><br>
+        <input type="number" placeholder="Amount to recharge" id="amt">
+        <br><br>
+        <select name="Select network" id="">
+            <option value="">SELECT NETWORK</option>
+            <option value="">MTN</option>
+            <option value="">AIRTEL</option>
+            <option value="">GLO</option>
+            <option value="">ETISALAT</option>
+        </select>
+    </div>
+    <br><br>
+    <button onclick="buyairtime()" id="btn">BUY AIRTIME</button>
+
+
+
+
+
+
+ <script>
+    var allusers=JSON.parse(localStorage.getItem('usersinfo'))
+    var currentIndex = JSON.parse(localStorage.getItem('localIndex'))
+    const buyairtime=()=>{
+        if(amt.value=='' && num.value==''){
+     alert('Please input Details!!!')
+        } else{
+            console.log(allusers);
+            console.log(currentIndex);
+            var newamount = Number( Number(allusers[currentIndex].balance) - Number(amt.value)) 
+            allusers[currentIndex].balance = newamount;
+           localStorage.setItem('usersinfo',JSON.stringify(allusers))
+           alert('Transtion successful')
+            window.location.href='dashboard.html'
+        }
+    }
+ </script>
+</body>
+</html>
