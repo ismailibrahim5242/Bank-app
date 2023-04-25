@@ -70,3 +70,16 @@ body{
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: bold;
 }
+
+#btn2{
+    background-color: rgb(250, 12, 12);
+    margin-left: 75pc;
+    margin-bottom: 2pc;
+    min-height: 50px;
+    min-width: 50px;
+    color: white;
+    font-size: large;
+    font-weight: bold;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+     border-radius: 1pc;
+}

@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="dashboard.css">
 </head>
 <body>
- <h1 align="center">WELCOME TO DASHBOARD</h1>
+
+  <h1 align="center" style="color: blue;">WELCOME TO DASHBOARD</h1>
+  <button id="btn2" onclick="logout()">LOGOUT</button>
       <div id="dash">
         <span class="title" style="color: white;">Account Name:</span> <span id="accname" style="color: white;"></span>
         <br><br>
@@ -29,12 +31,14 @@
 
 
 
+
+
     <script>
      var allusers=JSON.parse(localStorage.getItem('usersinfo'))
       var currentIndex = JSON.parse(localStorage.getItem('localIndex'))
       console.log(allusers);
       console.log(currentIndex);
-      accname.innerHTML = `${allusers[currentIndex].firstname}`
+      accname.innerHTML = `${allusers[currentIndex].firstname}  ${allusers[currentIndex].lastname}`
       acctno.innerHTML=`${allusers[currentIndex].Accountnumber}`
       Balance.innerHTML=`${allusers[currentIndex].balance}`
       const Airtime=()=>{
@@ -60,6 +64,10 @@
 
        const settings=()=>{
         window.location.href='settings.html'
+       }
+
+       const logout=()=>{
+        window.location.href="login.html"
        }
       
     </script>

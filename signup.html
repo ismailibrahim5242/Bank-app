@@ -29,10 +29,24 @@
         <br><br><br>
         <input type="text" placeholder="Email" id="em">
         <input type="number" placeholder="phonenumber" id="ph">
-        <input type="text" placeholder="country" id="co">
+       <select name="" id="co">
+        <option value="">Country</option>
+        <option value="">Nigeria</option>
+        <option value="">Egypt</option>
+        <option value="">United state</option>
+        <option value="">United kingdom</option>
+        <option value="">South Africa</option>
+        <option value="">Senegal</option>
+        <option value="">Morocco</option>
+        <option value="">Madagascar</option>
+        <option value="">Lesoto</option>
+        <option value="">Germany</option>
+        <option value="">Guinea</option>
+       </select>
+       
         <br><br><br>
         <input type="text" placeholder="Nextofkin name" id="nk">
-        <input type="text" placeholder="Nextofkin number" id="nextno">
+        <input type="number" placeholder="NIN" id="nextno">
         <br><br>
         <input type="password" placeholder="Password" id="pw">
         <input type="password" placeholder="Confirm password" id="cpw">
@@ -63,20 +77,20 @@
                 phonenumber:ph.value,
                 country:co.value,
                 Nextofkin:nk.value,
-                NextofkinNumber:nextno.value,
+                NIN:nextno.value,
                 password:pw.value,
                 confirmpassword:cpw.value,
                 balance: 0,
                 Accountnumber: `061${Math.floor(Math.random()* 10000000 )}`,
                 Transactionhistory: []
             }
-            if(fn.value=="" && mn.value=="" && em.value=="" && pw.value==""){
+            if(fn.value=="" && mn.value=="" && em.value=="" && pw.value=="" && pw.value ==cpw.value){
                  alert('please complete the form')
             }else{
                 allusers.push(users)
             localStorage.setItem('usersinfo', JSON.stringify(allusers))
             console.log(allusers);
-            window.location.href='Login.html'
+            window.location.href='login.html'
             }
         }
     </script>
