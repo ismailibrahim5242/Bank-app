@@ -28,6 +28,7 @@ body{
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     color: whitesmoke;
     background-color: rgb(64, 121, 226);
+    cursor: pointer;
 }
 
 #fn{

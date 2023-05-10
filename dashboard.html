@@ -34,6 +34,9 @@
 
 
     <script>
+      if (!localStorage.localIndex) {
+        window.location.href = 'login.html'
+      }
      var allusers=JSON.parse(localStorage.getItem('usersinfo'))
       var currentIndex = JSON.parse(localStorage.getItem('localIndex'))
       console.log(allusers);
@@ -67,6 +70,7 @@
        }
 
        const logout=()=>{
+        localStorage.removeItem('localIndex')
         window.location.href="login.html"
        }
       

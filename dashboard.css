@@ -29,6 +29,7 @@ body{
     background-color:rgb(93, 186, 248);
     border-radius: 2pc;
     padding: 1.2rem;
+    cursor: pointer;
 }
 #one{
     color: rgba(0, 0, 0, 0.932);
@@ -72,6 +73,7 @@ body{
 }
 
 #btn2{
+    cursor: grab;
     background-color: rgb(250, 12, 12);
     margin-left: 75pc;
     margin-bottom: 2pc;
